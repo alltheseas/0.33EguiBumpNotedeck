@@ -1,0 +1,68 @@
+[package]
+name = "notedeck"
+version = { workspace = true }
+edition = "2021"
+description = "The APIs and data structures used by notedeck apps"
+
+[dependencies]
+nostrdb = { workspace = true }
+jni = { workspace = true }
+url = { workspace = true }
+strum = { workspace = true }
+blurhash = { workspace = true }
+strum_macros = { workspace = true }
+dirs = { workspace = true }
+enostr = { workspace = true }
+nostr = { workspace = true }
+egui = { workspace = true }
+egui_extras = { workspace = true }
+eframe = { workspace = true }
+resvg = { workspace = true }
+image = { workspace = true }
+base32 = { workspace = true }
+poll-promise = { workspace = true }
+tracing = { workspace = true }
+uuid = { workspace = true }
+serde_json = { workspace = true }
+serde = { workspace = true }
+hex = { workspace = true }
+thiserror = { workspace = true }
+puffin = { workspace = true, optional = true }
+puffin_egui = { workspace = true, optional = true }
+sha2 = { workspace = true }
+bincode = { workspace = true }
+ehttp = {workspace = true }
+mime_guess = { workspace = true }
+egui-winit = { workspace = true }
+tokenator = { workspace = true }
+profiling = { workspace = true }
+nwc = { workspace = true }
+tokio = { workspace = true }
+bech32 = { workspace = true }
+lightning-invoice = { workspace = true }
+secp256k1 = { workspace = true }
+hashbrown = { workspace = true }
+fluent = { workspace = true }
+fluent-resmgr = { workspace = true }
+fluent-langneg = { workspace = true }
+unic-langid = { workspace = true }
+once_cell = { workspace = true }
+md5 = { workspace = true }
+bitflags = { workspace = true }
+regex = "1"
+chrono = { workspace = true }
+indexmap = {workspace = true}
+rand = {workspace = true}
+crossbeam-channel = "0.5"
+
+[dev-dependencies]
+tempfile = { workspace = true }
+tokio = { workspace = true }
+
+[target.'cfg(target_os = "android")'.dependencies]
+jni = { workspace = true }
+android-activity = { workspace = true }
+ndk-context = "0.1"
+
+[features]
+puffin = ["puffin_egui", "dep:puffin"]

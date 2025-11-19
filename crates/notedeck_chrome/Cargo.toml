@@ -1,0 +1,115 @@
+[package]
+name = "notedeck_chrome"
+version = { workspace = true }
+authors = ["William Casarin <jb55@jb55.com>", "kernelkind <kernelkind@gmail.com>"]
+edition = "2021"
+#default-run = "notedeck"
+#rust-version = "1.60"
+license = "GPLv3"
+description = "The nostr browser"
+
+[dependencies]
+bitflags = { workspace = true }
+eframe = { workspace = true }
+egui_tabs = { workspace = true }
+egui_extras = { workspace = true }
+egui_nav = { workspace = true }
+egui = { workspace = true }
+notedeck_columns = { workspace = true }
+notedeck_ui = { workspace = true }
+notedeck_dave = { workspace = true }
+notedeck_notebook = { workspace = true }
+notedeck_clndash = { workspace = true }
+notedeck = { workspace = true }
+nostrdb = { workspace = true }
+puffin = { workspace = true, optional = true }
+puffin_egui = { workspace = true, optional = true }
+serde_json = { workspace = true }
+serde = { workspace = true }
+strum = { workspace = true }
+tokio = { workspace = true }
+tracing-appender = { workspace = true }
+tracing-subscriber = { workspace = true }
+tracing = { workspace = true }
+profiling = { workspace = true }
+re_memory = { workspace = true, optional = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+[[bin]]
+name = "notedeck"
+path = "src/notedeck.rs"
+
+#[[bin]]
+#name = "ui_preview"
+#path = "src/preview.rs"
+
+[features]
+default = []
+memory = ["re_memory"]
+puffin = ["profiling/profile-with-puffin", "dep:puffin"]
+tracy = ["profiling/profile-with-tracy"]
+debug-widget-callstack = ["egui/callstack"]
+debug-interactive-widgets = []
+
+[target.'cfg(target_os = "android")'.dependencies]
+tracing-logcat = "0.1.0"
+#log = { workspace = true }
+#android-activity = { version = "0.6", features = [ "game-activity" ] }
+egui-winit.workspace = true
+
+[package.metadata.bundle]
+name = "Notedeck"
+short_description = "The nostr browser"
+identifier = "com.damus.notedeck"
+icon = ["assets/app_icon.icns"]
+
+[package.metadata.android.manifest.queries]
+intent = [
+    { action = ["android.intent.action.MAIN"] },
+]
+
+
+[package.metadata.android]
+package = "com.damus.app"
+apk_name = "Notedeck"
+#assets = "assets"
+
+[[package.metadata.android.uses_feature]]
+name = "android.hardware.vulkan.level"
+required = true
+version = 1
+
+[[package.metadata.android.uses_permission]]
+name = "android.permission.WRITE_EXTERNAL_STORAGE"
+max_sdk_version = 18
+
+[[package.metadata.android.uses_permission]]
+name = "android.permission.READ_EXTERNAL_STORAGE"
+max_sdk_version = 18
+
+[package.metadata.android.signing.release]
+path = "../../damus.keystore"
+keystore_password = "damuskeystore"
+
+[[package.metadata.android.uses_permission]]
+name = "android.permission.INTERNET"
+
+[package.metadata.android.application]
+label = "Notedeck"
+
+[package.metadata.deb]
+name = "notedeck"
+copyright = "2024 Damus, Nostr Inc."
+# Manually specify a libc dependency that works on Ubuntu 22.04:
+depends = ["libc6 (>= 2.35)"]
+
+[package.metadata.generate-rpm]
+name = "notedeck"
+assets = [
+    { source = "target/release/notedeck", dest = "/usr/bin/notedeck", mode = "755" },
+]

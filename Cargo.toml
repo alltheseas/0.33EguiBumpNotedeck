@@ -10,7 +10,7 @@ members = [
     "crates/notedeck_ui",
     "crates/notedeck_clndash",
 
-    "crates/enostr", "crates/tokenator", "crates/notedeck_dave", "crates/notedeck_ui", "crates/notedeck_clndash",
+    "crates/enostr", "crates/tokenator", "crates/notedeck_dave", "crates/notedeck_ui", "crates/notedeck_clndash", "crates/egui_virtual_list",
 ]
 
 [workspace.dependencies]
@@ -28,10 +28,10 @@ eframe = { git = "https://github.com/damus-io/egui", rev = "e05638c40ef734312b3b
 egui-winit = { git = "https://github.com/damus-io/egui", rev = "e05638c40ef734312b3b3e36397d389d0a78b10b", features = ["android-game-activity", "clipboard"] }
 egui-wgpu = { git = "https://github.com/damus-io/egui", rev = "e05638c40ef734312b3b3e36397d389d0a78b10b" }
 egui_extras = { git = "https://github.com/damus-io/egui", rev = "e05638c40ef734312b3b3e36397d389d0a78b10b", features = ["all_loaders"] }
-egui_nav = { git = "https://github.com/damus-io/egui-nav", rev = "4a54a6c7c34243e4bcfdeb37cc15de3536811719" }
-egui_tabs = { git = "https://github.com/damus-io/egui-tabs", rev = "6eb91740577b374a8a6658c09c9a4181299734d0" }
+egui_nav = { git = "https://github.com/damus-io/egui-nav", rev = "81ac7f0758bae3e24425fba83981b2a73895e9cf" }
+egui_tabs = { git = "https://github.com/damus-io/egui-tabs", rev = "e457223e89fcea2bd249ec8e56bbec6b034dd0b" }
 #egui_virtual_list = "0.6.0"
-egui_virtual_list = { git = "https://github.com/jb55/hello_egui", rev = "a66b6794f5e707a2f4109633770e02b02fb722e1" }
+egui_virtual_list = { path = "crates/egui_virtual_list" }
 ehttp = "0.5.0"
 enostr = { path = "crates/enostr" } 
 ewebsock = { version = "0.2.0", features = ["tls"] }
@@ -120,11 +120,3 @@ puffin_egui = { git = "https://github.com/jb55/puffin", package = "puffin_egui",
 #winit = { path = "/home/jb55/dev/github/rust-windowing/winit" }
 #android-activity = { git = "https://github.com/damus-io/android-activity", rev = "f56c974aa5182d5fbd361879f5899eb8f11a37ec" }
 #android-activity = { path = "/home/jb55/dev/github/rust-mobile/android-activity/android-activity" }
-
-[patch."https://github.com/damus-io/egui"]
-egui = { path = "../../0.33kernel/egui/crates/egui" }
-eframe = { path = "../../0.33kernel/egui/crates/eframe" }
-egui-winit = { path = "../../0.33kernel/egui/crates/egui-winit" }
-egui-wgpu = { path = "../../0.33kernel/egui/crates/egui-wgpu" }
-egui_extras = { path = "../../0.33kernel/egui/crates/egui_extras" }
-epaint = { path = "../../0.33kernel/egui/crates/epaint" }

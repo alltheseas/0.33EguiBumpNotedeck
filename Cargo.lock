@@ -1452,6 +1452,7 @@ dependencies = [
 [[package]]
 name = "ecolor"
 version = "0.33.0"
+source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
 dependencies = [
  "bytemuck",
  "emath 0.33.0",
@@ -1461,6 +1462,7 @@ dependencies = [
 [[package]]
 name = "eframe"
 version = "0.33.0"
+source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
 dependencies = [
  "ahash",
  "bytemuck",
@@ -1511,6 +1513,7 @@ dependencies = [
 [[package]]
 name = "egui"
 version = "0.33.0"
+source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
 dependencies = [
  "accesskit 0.21.1",
  "ahash",
@@ -1530,6 +1533,7 @@ dependencies = [
 [[package]]
 name = "egui-wgpu"
 version = "0.33.0"
+source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
 dependencies = [
  "ahash",
  "bytemuck",
@@ -1548,6 +1552,7 @@ dependencies = [
 [[package]]
 name = "egui-winit"
 version = "0.33.0"
+source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
 dependencies = [
  "arboard",
  "bytemuck",
@@ -1574,7 +1579,6 @@ dependencies = [
  "egui 0.31.1",
  "enum-map",
  "log",
- "mime_guess2",
  "profiling",
  "serde",
 ]
@@ -1582,6 +1586,7 @@ dependencies = [
 [[package]]
 name = "egui_extras"
 version = "0.33.0"
+source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
 dependencies = [
  "ahash",
  "egui 0.33.0",
@@ -1597,6 +1602,7 @@ dependencies = [
 [[package]]
 name = "egui_glow"
 version = "0.33.0"
+source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
 dependencies = [
  "bytemuck",
  "egui 0.33.0",
@@ -1612,29 +1618,28 @@ dependencies = [
 [[package]]
 name = "egui_nav"
 version = "0.2.0"
-source = "git+https://github.com/damus-io/egui-nav?rev=4a54a6c7c34243e4bcfdeb37cc15de3536811719#4a54a6c7c34243e4bcfdeb37cc15de3536811719"
+source = "git+https://github.com/damus-io/egui-nav?rev=81ac7f0758bae3e24425fba83981b2a73895e9cf#81ac7f0758bae3e24425fba83981b2a73895e9cf"
 dependencies = [
  "bitflags 2.10.0",
- "egui 0.31.1",
- "egui_extras 0.31.1",
+ "egui 0.33.0",
+ "egui_extras 0.33.0",
  "tracing",
 ]
 
 [[package]]
 name = "egui_tabs"
 version = "0.2.1"
-source = "git+https://github.com/damus-io/egui-tabs?rev=6eb91740577b374a8a6658c09c9a4181299734d0#6eb91740577b374a8a6658c09c9a4181299734d0"
+source = "git+https://github.com/damus-io/egui-tabs?rev=e457223e89fcea2bd249ec8e56bbec6b034dd0b#e457223e89fcea2bd249ec8e56bbec6b034dd0b3"
 dependencies = [
- "egui 0.31.1",
- "egui_extras 0.31.1",
+ "egui 0.33.0",
+ "egui_extras 0.33.0",
 ]
 
 [[package]]
 name = "egui_virtual_list"
 version = "0.7.0"
-source = "git+https://github.com/jb55/hello_egui?rev=a66b6794f5e707a2f4109633770e02b02fb722e1#a66b6794f5e707a2f4109633770e02b02fb722e1"
 dependencies = [
- "egui 0.31.1",
+ "egui 0.33.0",
  "web-time 1.1.0",
 ]
 
@@ -1679,6 +1684,7 @@ dependencies = [
 [[package]]
 name = "emath"
 version = "0.33.0"
+source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
 dependencies = [
  "bytemuck",
  "serde",
@@ -1783,7 +1789,6 @@ dependencies = [
  "ahash",
  "ecolor 0.31.1",
  "emath 0.31.1",
- "epaint_default_fonts 0.31.1",
  "nohash-hasher",
  "parking_lot",
  "profiling",
@@ -1793,13 +1798,14 @@ dependencies = [
 [[package]]
 name = "epaint"
 version = "0.33.0"
+source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
 dependencies = [
  "ab_glyph",
  "ahash",
  "bytemuck",
  "ecolor 0.33.0",
  "emath 0.33.0",
- "epaint_default_fonts 0.33.0",
+ "epaint_default_fonts",
  "log",
  "nohash-hasher",
  "parking_lot",
@@ -1809,13 +1815,8 @@ dependencies = [
 
 [[package]]
 name = "epaint_default_fonts"
-version = "0.31.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fc7e7a64c02cf7a5b51e745a9e45f60660a286f151c238b9d397b3e923f5082f"
-
-[[package]]
-name = "epaint_default_fonts"
 version = "0.33.0"
+source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
 
 [[package]]
 name = "equator"
@@ -2706,7 +2707,7 @@ dependencies = [
  "js-sys",
  "log",
  "wasm-bindgen",
- "windows-core 0.61.2",
+ "windows-core 0.58.0",
 ]
 
 [[package]]
@@ -8247,33 +8248,3 @@ dependencies = [
  "syn 2.0.104",
  "winnow",
 ]
-
-[[patch.unused]]
-name = "eframe"
-version = "0.33.0"
-source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
-
-[[patch.unused]]
-name = "egui"
-version = "0.33.0"
-source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
-
-[[patch.unused]]
-name = "egui-wgpu"
-version = "0.33.0"
-source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
-
-[[patch.unused]]
-name = "egui-winit"
-version = "0.33.0"
-source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
-
-[[patch.unused]]
-name = "egui_extras"
-version = "0.33.0"
-source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
-
-[[patch.unused]]
-name = "epaint"
-version = "0.33.0"
-source = "git+https://github.com/damus-io/egui?rev=e05638c40ef734312b3b3e36397d389d0a78b10b#e05638c40ef734312b3b3e36397d389d0a78b10b"
